@@ -20,7 +20,7 @@ We're leveraging a modern and powerful stack to ensure seamless performance and 
 |-----------------|------------------|----------|
 | **Flutter**     | Mobile App Frontend | ![Flutter](https://img.icons8.com/color/48/000000/flutter.png) |
 | **Node.js**     | Backend API Integration | ![Node.js](https://img.icons8.com/color/48/000000/nodejs.png) |
-| **Express.js**  | API Framework | ![Express](https://github.com/pianist22/Images/blob/main/Express%2Cjs.png) |
+| **Express.js**  | API Framework | ![Express]<img src="https://github.com/pianist22/Images/blob/main/Express%2Cjs.png" alt="Flutter" width="200" height='100'> |
 | **MongoDB**     | NoSQL Database | ![MongoDB](https://img.icons8.com/color/48/000000/mongodb.png) |
 | **Flask**       | Micro Web Framework | ![Flask](https://github.com/pianist22/Images/blob/main/Flask.png) |
 | **Python**      | AI/ML Development | ![Python](https://img.icons8.com/color/48/000000/python.png) |
