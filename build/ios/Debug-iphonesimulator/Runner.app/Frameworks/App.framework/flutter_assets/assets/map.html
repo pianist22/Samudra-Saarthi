@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_cd8d18d517af009653b138b0a4307c78 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+     <div style="
+     position: fixed;
+     bottom: 20px; left: 20px; width: 120px; height: auto;
+     background-color: white; border:1px solid grey; border-radius: 5px; padding: 5px;
+     box-shadow: 1px 1px 4px rgba(0,0,0,0.1); z-index:9999; font-size:12px;">
+     <strong style="display: block; text-align: center; margin-bottom: 4px;">Level of Threat</strong>
+     <div style="margin-bottom: 4px;">
+        <i class="fa fa-cloud fa-lg" style="color:#70AE26"></i>&nbsp; <span>Safe</span>
+     </div>
+     <div style="margin-bottom: 4px;">
+        <i class="fa fa-cloud fa-lg" style="color:#FFCB90"></i>&nbsp; <span>Low Alert</span>
+     </div>
+     <div style="margin-bottom: 4px;">
+        <i class="fa fa-cloud fa-lg" style="color:#EE932E"></i>&nbsp; <span>High Alert</span>
+     </div>
+     <div>
+        <i class="fa fa-cloud fa-lg" style="color:#D43E2B"></i>&nbsp; <span>Unsafe</span>
+     </div>
+     </div>
+     
+    
+            <div class="folium-map" id="map_cd8d18d517af009653b138b0a4307c78" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_cd8d18d517af009653b138b0a4307c78 = L.map(
+                "map_cd8d18d517af009653b138b0a4307c78",
+                {
+                    center: [15.0, 74.0],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 6,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_62eedc294652875a645cf4bbbe7291a9 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_62eedc294652875a645cf4bbbe7291a9.addTo(map_cd8d18d517af009653b138b0a4307c78);
+        
+    
+            var marker_76e1b78087c10133d45d3c459ab8fb61 = L.marker(
+                [15.0274, 74.0169],
+                {}
+            ).addTo(map_cd8d18d517af009653b138b0a4307c78);
+        
+    
+            var icon_80d3d7814616d6b7eb8db241128405cc = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_76e1b78087c10133d45d3c459ab8fb61.setIcon(icon_80d3d7814616d6b7eb8db241128405cc);
+        
+    
+        var popup_2555722a7d9cc91605f696fc8cd11971 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_426cfd9507bd86b92ac4a86c61056d4d = $(`<div id="html_426cfd9507bd86b92ac4a86c61056d4d" style="width: 100.0%; height: 100.0%;">Agonda Beach: The beach is safe</div>`)[0];
+                popup_2555722a7d9cc91605f696fc8cd11971.setContent(html_426cfd9507bd86b92ac4a86c61056d4d);
+            
+        
+
+        marker_76e1b78087c10133d45d3c459ab8fb61.bindPopup(popup_2555722a7d9cc91605f696fc8cd11971)
+        ;
+
+        
+    
+    
+            var marker_862f6471befc3b7ab8d65b41a8dad72f = L.marker(
+                [9.49, 76.3264],
+                {}
+            ).addTo(map_cd8d18d517af009653b138b0a4307c78);
+        
+    
+            var icon_ac83c72f3832a8d8752fa231975bae76 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "beige", "prefix": "glyphicon"}
+            );
+            marker_862f6471befc3b7ab8d65b41a8dad72f.setIcon(icon_ac83c72f3832a8d8752fa231975bae76);
+        
+    
+        var popup_895585a225f017a220560f57e40a5e15 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d161f4192824d566069f14c9232a3a97 = $(`<div id="html_d161f4192824d566069f14c9232a3a97" style="width: 100.0%; height: 100.0%;">Alleppey Beach: Low alert</div>`)[0];
+                popup_895585a225f017a220560f57e40a5e15.setContent(html_d161f4192824d566069f14c9232a3a97);
+            
+        
+
+        marker_862f6471befc3b7ab8d65b41a8dad72f.bindPopup(popup_895585a225f017a220560f57e40a5e15)
+        ;
+
+        
+    
+    
+            var marker_f973748226ceb180ba359f214866a665 = L.marker(
+                [15.5529, 73.7517],
+                {}
+            ).addTo(map_cd8d18d517af009653b138b0a4307c78);
+        
+    
+            var icon_6cdca70dd7899a4ff9b14dc3935f902d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_f973748226ceb180ba359f214866a665.setIcon(icon_6cdca70dd7899a4ff9b14dc3935f902d);
+        
+    
+        var popup_c4533b23e64a83ced35a5de8e2add43c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_689326ba83302ffc410270f47dc47cae = $(`<div id="html_689326ba83302ffc410270f47dc47cae" style="width: 100.0%; height: 100.0%;">Baga Beach: The beach is unsafe</div>`)[0];
+                popup_c4533b23e64a83ced35a5de8e2add43c.setContent(html_689326ba83302ffc410270f47dc47cae);
+            
+        
+
+        marker_f973748226ceb180ba359f214866a665.bindPopup(popup_c4533b23e64a83ced35a5de8e2add43c)
+        ;
+
+        
+    
+    
+            var marker_d6edbc2bfe19686b5493cf0dabdb52d8 = L.marker(
+                [15.5112, 73.7683],
+                {}
+            ).addTo(map_cd8d18d517af009653b138b0a4307c78);
+        
+    
+            var icon_7ebe413b8a7ad7c20b1056502baeab9e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_d6edbc2bfe19686b5493cf0dabdb52d8.setIcon(icon_7ebe413b8a7ad7c20b1056502baeab9e);
+        
+    
+        var popup_460e331d01a81426da5c1f0af4927231 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_78b57ed107626ad3fca92030ecc20e59 = $(`<div id="html_78b57ed107626ad3fca92030ecc20e59" style="width: 100.0%; height: 100.0%;">Candolim Beach: High alert</div>`)[0];
+                popup_460e331d01a81426da5c1f0af4927231.setContent(html_78b57ed107626ad3fca92030ecc20e59);
+            
+        
+
+        marker_d6edbc2bfe19686b5493cf0dabdb52d8.bindPopup(popup_460e331d01a81426da5c1f0af4927231)
+        ;
+
+        
+    
+    
+            var marker_e0e9f2935458c3062360adf2ec398a83 = L.marker(
+                [9.1797, 79.425],
+                {}
+            ).addTo(map_cd8d18d517af009653b138b0a4307c78);
+        
+    
+            var icon_b35844f089f8382179bfb3b3b82b5d40 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_e0e9f2935458c3062360adf2ec398a83.setIcon(icon_b35844f089f8382179bfb3b3b82b5d40);
+        
+    
+        var popup_fabf7bab7b494b16e5a6fb86192c3fae = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_300ec7e118b5bc8306a8a241b511cb79 = $(`<div id="html_300ec7e118b5bc8306a8a241b511cb79" style="width: 100.0%; height: 100.0%;">Dhanushkoti Beach: The beach is unsafe</div>`)[0];
+                popup_fabf7bab7b494b16e5a6fb86192c3fae.setContent(html_300ec7e118b5bc8306a8a241b511cb79);
+            
+        
+
+        marker_e0e9f2935458c3062360adf2ec398a83.bindPopup(popup_fabf7bab7b494b16e5a6fb86192c3fae)
+        ;
+
+        
+    
+    
+            var marker_a06fab5f44b0f1200579d8c7607431fe = L.marker(
+                [20.7141, 70.9876],
+                {}
+            ).addTo(map_cd8d18d517af009653b138b0a4307c78);
+        
+    
+            var icon_15519691cf005f577e8e3c76c9fe5404 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "beige", "prefix": "glyphicon"}
+            );
+            marker_a06fab5f44b0f1200579d8c7607431fe.setIcon(icon_15519691cf005f577e8e3c76c9fe5404);
+        
+    
+        var popup_0c26228db666f9ccf939ec403c958dde = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a454e96561ac6741525a1bd4f54667c4 = $(`<div id="html_a454e96561ac6741525a1bd4f54667c4" style="width: 100.0%; height: 100.0%;">Diu Beach: Low alert</div>`)[0];
+                popup_0c26228db666f9ccf939ec403c958dde.setContent(html_a454e96561ac6741525a1bd4f54667c4);
+            
+        
+
+        marker_a06fab5f44b0f1200579d8c7607431fe.bindPopup(popup_0c26228db666f9ccf939ec403c958dde)
+        ;
+
+        
+    
+    
+            var marker_a37cba546e410ffa90702634de0cbf16 = L.marker(
+                [14.5541, 74.3186],
+                {}
+            ).addTo(map_cd8d18d517af009653b138b0a4307c78);
+        
+    
+            var icon_328f861b54ba3c6f509e1e5c207a8d49 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_a37cba546e410ffa90702634de0cbf16.setIcon(icon_328f861b54ba3c6f509e1e5c207a8d49);
+        
+    
+        var popup_efa28f891b073149507977691992bf5e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cf7cfe8518db9440e1f4c1329189d38c = $(`<div id="html_cf7cfe8518db9440e1f4c1329189d38c" style="width: 100.0%; height: 100.0%;">Gokarna Beach: The beach is safe</div>`)[0];
+                popup_efa28f891b073149507977691992bf5e.setContent(html_cf7cfe8518db9440e1f4c1329189d38c);
+            
+        
+
+        marker_a37cba546e410ffa90702634de0cbf16.bindPopup(popup_efa28f891b073149507977691992bf5e)
+        ;
+
+        
+    
+    
+            var marker_5a5d6641be56b9d33b7e5d5bf97bee6b = L.marker(
+                [8.3985, 76.9788],
+                {}
+            ).addTo(map_cd8d18d517af009653b138b0a4307c78);
+        
+    
+            var icon_fb4cfc1c6ad18560b83f4ef5ff71c177 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_5a5d6641be56b9d33b7e5d5bf97bee6b.setIcon(icon_fb4cfc1c6ad18560b83f4ef5ff71c177);
+        
+    
+        var popup_70f2c7f38fcfdd1e4fe23a5f140998d6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_182e5ced21238ad60b3df9c92f383640 = $(`<div id="html_182e5ced21238ad60b3df9c92f383640" style="width: 100.0%; height: 100.0%;">Kovalam Beach: High alert</div>`)[0];
+                popup_70f2c7f38fcfdd1e4fe23a5f140998d6.setContent(html_182e5ced21238ad60b3df9c92f383640);
+            
+        
+
+        marker_5a5d6641be56b9d33b7e5d5bf97bee6b.bindPopup(popup_70f2c7f38fcfdd1e4fe23a5f140998d6)
+        ;
+
+        
+    
+    
+            var marker_cbeb351e7d704785b0b8edae2be9e320 = L.marker(
+                [13.05, 80.2824],
+                {}
+            ).addTo(map_cd8d18d517af009653b138b0a4307c78);
+        
+    
+            var icon_068af4085d00818b8c2c820cc87a7a99 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_cbeb351e7d704785b0b8edae2be9e320.setIcon(icon_068af4085d00818b8c2c820cc87a7a99);
+        
+    
+        var popup_307dab236fc5e7fb953d1530195d1ec4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e9a648728cbcfaa3c5025d49c7b9d60a = $(`<div id="html_e9a648728cbcfaa3c5025d49c7b9d60a" style="width: 100.0%; height: 100.0%;">Marina Beach: The beach is safe</div>`)[0];
+                popup_307dab236fc5e7fb953d1530195d1ec4.setContent(html_e9a648728cbcfaa3c5025d49c7b9d60a);
+            
+        
+
+        marker_cbeb351e7d704785b0b8edae2be9e320.bindPopup(popup_307dab236fc5e7fb953d1530195d1ec4)
+        ;
+
+        
+    
+    
+            var marker_b049fd270db681f3253bb0cef79d061e = L.marker(
+                [21.6826, 87.7261],
+                {}
+            ).addTo(map_cd8d18d517af009653b138b0a4307c78);
+        
+    
+            var icon_e79bc5bb08a62482bd411d989ce4d8b8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "beige", "prefix": "glyphicon"}
+            );
+            marker_b049fd270db681f3253bb0cef79d061e.setIcon(icon_e79bc5bb08a62482bd411d989ce4d8b8);
+        
+    
+        var popup_562bce5192e75a2979e10eed07d424e2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cfa4443aaeadf43a593838ebedb8b26f = $(`<div id="html_cfa4443aaeadf43a593838ebedb8b26f" style="width: 100.0%; height: 100.0%;">Mandarmani Beach: Low alert</div>`)[0];
+                popup_562bce5192e75a2979e10eed07d424e2.setContent(html_cfa4443aaeadf43a593838ebedb8b26f);
+            
+        
+
+        marker_b049fd270db681f3253bb0cef79d061e.bindPopup(popup_562bce5192e75a2979e10eed07d424e2)
+        ;
+
+        
+    
+    
+            var marker_0f22a2ba032993fa3f1a54c54ec0902a = L.marker(
+                [15.0091, 74.0234],
+                {}
+            ).addTo(map_cd8d18d517af009653b138b0a4307c78);
+        
+    
+            var icon_f9b955f2bce1198bad688b7d83e2be4c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_0f22a2ba032993fa3f1a54c54ec0902a.setIcon(icon_f9b955f2bce1198bad688b7d83e2be4c);
+        
+    
+        var popup_aff61d236f23ed29a19aaeae769d880a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2d04a56a0626f16987694448998da6c7 = $(`<div id="html_2d04a56a0626f16987694448998da6c7" style="width: 100.0%; height: 100.0%;">Palolem Beach: The beach is safe</div>`)[0];
+                popup_aff61d236f23ed29a19aaeae769d880a.setContent(html_2d04a56a0626f16987694448998da6c7);
+            
+        
+
+        marker_0f22a2ba032993fa3f1a54c54ec0902a.bindPopup(popup_aff61d236f23ed29a19aaeae769d880a)
+        ;
+
+        
+    
+    
+            var marker_981d3061240cf2eba9c785dd5b79303f = L.marker(
+                [19.7966, 85.8245],
+                {}
+            ).addTo(map_cd8d18d517af009653b138b0a4307c78);
+        
+    
+            var icon_fd5acc8d404387d6cb29aaf074fa5736 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_981d3061240cf2eba9c785dd5b79303f.setIcon(icon_fd5acc8d404387d6cb29aaf074fa5736);
+        
+    
+        var popup_97517a8a9b1d0c03c46d73a049b4e292 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_c084696f2ec142a508c9b8f97563b571 = $(`<div id="html_c084696f2ec142a508c9b8f97563b571" style="width: 100.0%; height: 100.0%;">Puri Beach: High alert</div>`)[0];
+                popup_97517a8a9b1d0c03c46d73a049b4e292.setContent(html_c084696f2ec142a508c9b8f97563b571);
+            
+        
+
+        marker_981d3061240cf2eba9c785dd5b79303f.bindPopup(popup_97517a8a9b1d0c03c46d73a049b4e292)
+        ;
+
+        
+    
+    
+            var marker_88d7b345a29a7e998312a95fe4373228 = L.marker(
+                [16.036, 73.4673],
+                {}
+            ).addTo(map_cd8d18d517af009653b138b0a4307c78);
+        
+    
+            var icon_2ec72f33fe6d6928185099b70fd761a0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_88d7b345a29a7e998312a95fe4373228.setIcon(icon_2ec72f33fe6d6928185099b70fd761a0);
+        
+    
+        var popup_cce083da852b81801ca6ef2654d8cb95 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_501d9c35b1f471279edff6247b26754c = $(`<div id="html_501d9c35b1f471279edff6247b26754c" style="width: 100.0%; height: 100.0%;">Tarkarli Beach: The beach is safe</div>`)[0];
+                popup_cce083da852b81801ca6ef2654d8cb95.setContent(html_501d9c35b1f471279edff6247b26754c);
+            
+        
+
+        marker_88d7b345a29a7e998312a95fe4373228.bindPopup(popup_cce083da852b81801ca6ef2654d8cb95)
+        ;
+
+        
+    
+    
+            var marker_3547fbf04226614ce5d5e93297890aa0 = L.marker(
+                [19.0968, 72.8267],
+                {}
+            ).addTo(map_cd8d18d517af009653b138b0a4307c78);
+        
+    
+            var icon_9dbd54732a30457022ba9193a9f17f47 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "beige", "prefix": "glyphicon"}
+            );
+            marker_3547fbf04226614ce5d5e93297890aa0.setIcon(icon_9dbd54732a30457022ba9193a9f17f47);
+        
+    
+        var popup_f55eb6d5061bfe413c2fbd3fd6f17b4b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9c6221402d42f6548b3a0b8c6dd52175 = $(`<div id="html_9c6221402d42f6548b3a0b8c6dd52175" style="width: 100.0%; height: 100.0%;">Juhu Beach: Low alert</div>`)[0];
+                popup_f55eb6d5061bfe413c2fbd3fd6f17b4b.setContent(html_9c6221402d42f6548b3a0b8c6dd52175);
+            
+        
+
+        marker_3547fbf04226614ce5d5e93297890aa0.bindPopup(popup_f55eb6d5061bfe413c2fbd3fd6f17b4b)
+        ;
+
+        
+    
+    
+            var marker_fcefbd632f9428283c8cc3934cb3bfd8 = L.marker(
+                [8.7356, 76.7167],
+                {}
+            ).addTo(map_cd8d18d517af009653b138b0a4307c78);
+        
+    
+            var icon_f6fd3fdc14f978af673878536e70a12b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_fcefbd632f9428283c8cc3934cb3bfd8.setIcon(icon_f6fd3fdc14f978af673878536e70a12b);
+        
+    
+        var popup_74c62bdd233dfbbaa4b736acbb4e0e24 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9f85f30421cbf838fcc1f711a1261e9e = $(`<div id="html_9f85f30421cbf838fcc1f711a1261e9e" style="width: 100.0%; height: 100.0%;">Varkala Beach: The beach is safe</div>`)[0];
+                popup_74c62bdd233dfbbaa4b736acbb4e0e24.setContent(html_9f85f30421cbf838fcc1f711a1261e9e);
+            
+        
+
+        marker_fcefbd632f9428283c8cc3934cb3bfd8.bindPopup(popup_74c62bdd233dfbbaa4b736acbb4e0e24)
+        ;
+
+        
+    
+    
+            var marker_86bb3512af770216f61bae35c41ba813 = L.marker(
+                [15.5439, 73.7553],
+                {}
+            ).addTo(map_cd8d18d517af009653b138b0a4307c78);
+        
+    
+            var icon_d75d8025a31b0c83cc70d78d6e9ea190 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_86bb3512af770216f61bae35c41ba813.setIcon(icon_d75d8025a31b0c83cc70d78d6e9ea190);
+        
+    
+        var popup_d496a27fcc5218bdde6e68031547487e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1a7c584dec1b1098109600e635055da2 = $(`<div id="html_1a7c584dec1b1098109600e635055da2" style="width: 100.0%; height: 100.0%;">Calangute Beach: The beach is unsafe</div>`)[0];
+                popup_d496a27fcc5218bdde6e68031547487e.setContent(html_1a7c584dec1b1098109600e635055da2);
+            
+        
+
+        marker_86bb3512af770216f61bae35c41ba813.bindPopup(popup_d496a27fcc5218bdde6e68031547487e)
+        ;
+
+        
+    
+    
+            var marker_a6c3beeb639f9224005117c8deceecbf = L.marker(
+                [15.4826, 73.8086],
+                {}
+            ).addTo(map_cd8d18d517af009653b138b0a4307c78);
+        
+    
+            var icon_fa86c7c892f280b3756f77402fac03a2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_a6c3beeb639f9224005117c8deceecbf.setIcon(icon_fa86c7c892f280b3756f77402fac03a2);
+        
+    
+        var popup_c30e99d9a28137c1ce2566907b5f11ea = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_52d7dffdcd3fe1ca9ee575309e7f371f = $(`<div id="html_52d7dffdcd3fe1ca9ee575309e7f371f" style="width: 100.0%; height: 100.0%;">Miramar Beach: High alert</div>`)[0];
+                popup_c30e99d9a28137c1ce2566907b5f11ea.setContent(html_52d7dffdcd3fe1ca9ee575309e7f371f);
+            
+        
+
+        marker_a6c3beeb639f9224005117c8deceecbf.bindPopup(popup_c30e99d9a28137c1ce2566907b5f11ea)
+        ;
+
+        
+    
+    
+            var marker_85b7d42cddc16c18555890358c636499 = L.marker(
+                [15.6063, 73.7402],
+                {}
+            ).addTo(map_cd8d18d517af009653b138b0a4307c78);
+        
+    
+            var icon_f070543863adeea33468fcbc9169a45e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "beige", "prefix": "glyphicon"}
+            );
+            marker_85b7d42cddc16c18555890358c636499.setIcon(icon_f070543863adeea33468fcbc9169a45e);
+        
+    
+        var popup_b609276b6e2395355ff3d47d71a8e4ee = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_21db0cf19bb2d7f6db4f6a85d38573bf = $(`<div id="html_21db0cf19bb2d7f6db4f6a85d38573bf" style="width: 100.0%; height: 100.0%;">Chapora Beach: Low alert</div>`)[0];
+                popup_b609276b6e2395355ff3d47d71a8e4ee.setContent(html_21db0cf19bb2d7f6db4f6a85d38573bf);
+            
+        
+
+        marker_85b7d42cddc16c18555890358c636499.bindPopup(popup_b609276b6e2395355ff3d47d71a8e4ee)
+        ;
+
+        
+    
+    
+            var marker_ab2b1db7d51451bbb1681ff72b258819 = L.marker(
+                [19.175, 72.7955],
+                {}
+            ).addTo(map_cd8d18d517af009653b138b0a4307c78);
+        
+    
+            var icon_b2cc4ac0a1a5535f4130e09dccead8bb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_ab2b1db7d51451bbb1681ff72b258819.setIcon(icon_b2cc4ac0a1a5535f4130e09dccead8bb);
+        
+    
+        var popup_636f931a1a482ff2791777beec16ceec = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d18c9a7af29b012a91de392a07f15acf = $(`<div id="html_d18c9a7af29b012a91de392a07f15acf" style="width: 100.0%; height: 100.0%;">Aksa Beach: The beach is safe</div>`)[0];
+                popup_636f931a1a482ff2791777beec16ceec.setContent(html_d18c9a7af29b012a91de392a07f15acf);
+            
+        
+
+        marker_ab2b1db7d51451bbb1681ff72b258819.bindPopup(popup_636f931a1a482ff2791777beec16ceec)
+        ;
+
+        
+    
+    
+            var marker_e379bde4751d05fa8abb337ac05811c1 = L.marker(
+                [11.379, 75.71],
+                {}
+            ).addTo(map_cd8d18d517af009653b138b0a4307c78);
+        
+    
+            var icon_5df6310f35284bc405ed99f45f007eb8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_e379bde4751d05fa8abb337ac05811c1.setIcon(icon_5df6310f35284bc405ed99f45f007eb8);
+        
+    
+        var popup_b3d7b1fba73a491a5fc2f945d3d9d8a9 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_549e6e105acfc3335094bdad9f5e2988 = $(`<div id="html_549e6e105acfc3335094bdad9f5e2988" style="width: 100.0%; height: 100.0%;">Kappad Beach: High alert</div>`)[0];
+                popup_b3d7b1fba73a491a5fc2f945d3d9d8a9.setContent(html_549e6e105acfc3335094bdad9f5e2988);
+            
+        
+
+        marker_e379bde4751d05fa8abb337ac05811c1.bindPopup(popup_b3d7b1fba73a491a5fc2f945d3d9d8a9)
+        ;
+
+        
+    
+    
+            var marker_10cb8f0b4d7cf5857911ff2013ec29d4 = L.marker(
+                [13.6329, 74.6489],
+                {}
+            ).addTo(map_cd8d18d517af009653b138b0a4307c78);
+        
+    
+            var icon_922f827052b6a3bbc380acf696525cd3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_10cb8f0b4d7cf5857911ff2013ec29d4.setIcon(icon_922f827052b6a3bbc380acf696525cd3);
+        
+    
+        var popup_b61a2c9e2a9a7669ccca65f0a7a6db8c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_7095129e4ee2ea41b976a6dc5e72cea8 = $(`<div id="html_7095129e4ee2ea41b976a6dc5e72cea8" style="width: 100.0%; height: 100.0%;">Maravanthe Beach: The beach is safe</div>`)[0];
+                popup_b61a2c9e2a9a7669ccca65f0a7a6db8c.setContent(html_7095129e4ee2ea41b976a6dc5e72cea8);
+            
+        
+
+        marker_10cb8f0b4d7cf5857911ff2013ec29d4.bindPopup(popup_b61a2c9e2a9a7669ccca65f0a7a6db8c)
+        ;
+
+        
+    
+    
+            var marker_e5f91e4f9118b4564884bb6297a8c89d = L.marker(
+                [14.5302, 74.3174],
+                {}
+            ).addTo(map_cd8d18d517af009653b138b0a4307c78);
+        
+    
+            var icon_56db107a3b335e607ee12d8a0e91981f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "beige", "prefix": "glyphicon"}
+            );
+            marker_e5f91e4f9118b4564884bb6297a8c89d.setIcon(icon_56db107a3b335e607ee12d8a0e91981f);
+        
+    
+        var popup_719ec9a8cb0a98dabf102ad1db3a4805 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8b2e57303c285aa0088b60d846c3a6e8 = $(`<div id="html_8b2e57303c285aa0088b60d846c3a6e8" style="width: 100.0%; height: 100.0%;">Om Beach: Low alert</div>`)[0];
+                popup_719ec9a8cb0a98dabf102ad1db3a4805.setContent(html_8b2e57303c285aa0088b60d846c3a6e8);
+            
+        
+
+        marker_e5f91e4f9118b4564884bb6297a8c89d.bindPopup(popup_719ec9a8cb0a98dabf102ad1db3a4805)
+        ;
+
+        
+    
+    
+            var marker_f71deadb41410956e50becff52ffbb0d = L.marker(
+                [10.1599, 76.183],
+                {}
+            ).addTo(map_cd8d18d517af009653b138b0a4307c78);
+        
+    
+            var icon_ecbc7a9712774a67ba609147779afe4f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_f71deadb41410956e50becff52ffbb0d.setIcon(icon_ecbc7a9712774a67ba609147779afe4f);
+        
+    
+        var popup_6242a25244d405bbebb46849e8f7085b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f5ca82507064bf1bbcd4e449cc3aa98c = $(`<div id="html_f5ca82507064bf1bbcd4e449cc3aa98c" style="width: 100.0%; height: 100.0%;">Cherai Beach: High alert</div>`)[0];
+                popup_6242a25244d405bbebb46849e8f7085b.setContent(html_f5ca82507064bf1bbcd4e449cc3aa98c);
+            
+        
+
+        marker_f71deadb41410956e50becff52ffbb0d.bindPopup(popup_6242a25244d405bbebb46849e8f7085b)
+        ;
+
+        
+    
+    
+            var marker_ada9b92634562320047b1a7a6984f877 = L.marker(
+                [12.3952, 75.0277],
+                {}
+            ).addTo(map_cd8d18d517af009653b138b0a4307c78);
+        
+    
+            var icon_3bb75236563471a512261fd843c80386 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_ada9b92634562320047b1a7a6984f877.setIcon(icon_3bb75236563471a512261fd843c80386);
+        
+    
+        var popup_bfdbc25dce3aba3c799539fdcbd1793a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b35e13ea29ec6b3f8b0e632827d8455a = $(`<div id="html_b35e13ea29ec6b3f8b0e632827d8455a" style="width: 100.0%; height: 100.0%;">Bekal Beach: The beach is safe</div>`)[0];
+                popup_bfdbc25dce3aba3c799539fdcbd1793a.setContent(html_b35e13ea29ec6b3f8b0e632827d8455a);
+            
+        
+
+        marker_ada9b92634562320047b1a7a6984f877.bindPopup(popup_bfdbc25dce3aba3c799539fdcbd1793a)
+        ;
+
+        
+    
+    
+            var marker_9f62f492b4e9632df6595d86bbfce51a = L.marker(
+                [21.6322, 87.4061],
+                {}
+            ).addTo(map_cd8d18d517af009653b138b0a4307c78);
+        
+    
+            var icon_2fd36357fa5ed36831543c18a36b376e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "beige", "prefix": "glyphicon"}
+            );
+            marker_9f62f492b4e9632df6595d86bbfce51a.setIcon(icon_2fd36357fa5ed36831543c18a36b376e);
+        
+    
+        var popup_b3561db74851a9d059aa0f8a302465fe = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3edfc4d194952b0df4e8bb44bcf2b15a = $(`<div id="html_3edfc4d194952b0df4e8bb44bcf2b15a" style="width: 100.0%; height: 100.0%;">Talasari Beach: Low alert</div>`)[0];
+                popup_b3561db74851a9d059aa0f8a302465fe.setContent(html_3edfc4d194952b0df4e8bb44bcf2b15a);
+            
+        
+
+        marker_9f62f492b4e9632df6595d86bbfce51a.bindPopup(popup_b3561db74851a9d059aa0f8a302465fe)
+        ;
+
+        
+    
+    
+            var marker_07a4536c69e13233f0563b1add550e37 = L.marker(
+                [18.3307, 72.9663],
+                {}
+            ).addTo(map_cd8d18d517af009653b138b0a4307c78);
+        
+    
+            var icon_7b4486a160f434f006c8db8815ee0354 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_07a4536c69e13233f0563b1add550e37.setIcon(icon_7b4486a160f434f006c8db8815ee0354);
+        
+    
+        var popup_c697d4429dc028d0996e6725845f6cde = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f28aafb390bee9888af2cd8b966f8f86 = $(`<div id="html_f28aafb390bee9888af2cd8b966f8f86" style="width: 100.0%; height: 100.0%;">Murud Beach: The beach is safe</div>`)[0];
+                popup_c697d4429dc028d0996e6725845f6cde.setContent(html_f28aafb390bee9888af2cd8b966f8f86);
+            
+        
+
+        marker_07a4536c69e13233f0563b1add550e37.bindPopup(popup_c697d4429dc028d0996e6725845f6cde)
+        ;
+
+        
+    
+    
+            var marker_b226335dca7b5a933c668e4052d1b9d2 = L.marker(
+                [18.1681, 73.0209],
+                {}
+            ).addTo(map_cd8d18d517af009653b138b0a4307c78);
+        
+    
+            var icon_22cc6e03f571c786d11e77cb717d4141 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_b226335dca7b5a933c668e4052d1b9d2.setIcon(icon_22cc6e03f571c786d11e77cb717d4141);
+        
+    
+        var popup_93c380ba481e357ea3325c66b6c7fb7b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8f6cd2dbc9cd9b1c0ffa709eb747e534 = $(`<div id="html_8f6cd2dbc9cd9b1c0ffa709eb747e534" style="width: 100.0%; height: 100.0%;">Diveagar Beach: High alert</div>`)[0];
+                popup_93c380ba481e357ea3325c66b6c7fb7b.setContent(html_8f6cd2dbc9cd9b1c0ffa709eb747e534);
+            
+        
+
+        marker_b226335dca7b5a933c668e4052d1b9d2.bindPopup(popup_93c380ba481e357ea3325c66b6c7fb7b)
+        ;
+
+        
+    
+    
+            var marker_e9dc91e3653bf5d5a6b4831df8a8a531 = L.marker(
+                [15.23, 73.945],
+                {}
+            ).addTo(map_cd8d18d517af009653b138b0a4307c78);
+        
+    
+            var icon_230a1ff90a2ac806cabb907f1884b3ae = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_e9dc91e3653bf5d5a6b4831df8a8a531.setIcon(icon_230a1ff90a2ac806cabb907f1884b3ae);
+        
+    
+        var popup_26336c9ba84a769b82eda91dcdd1efc0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_984a0a7e17a4e5882227966ce66c3d7b = $(`<div id="html_984a0a7e17a4e5882227966ce66c3d7b" style="width: 100.0%; height: 100.0%;">Varca Beach: The beach is safe</div>`)[0];
+                popup_26336c9ba84a769b82eda91dcdd1efc0.setContent(html_984a0a7e17a4e5882227966ce66c3d7b);
+            
+        
+
+        marker_e9dc91e3653bf5d5a6b4831df8a8a531.bindPopup(popup_26336c9ba84a769b82eda91dcdd1efc0)
+        ;
+
+        
+    
+    
+            var marker_d5a8ead0604b25c2b06500ccbef9e02b = L.marker(
+                [11.7623, 75.451],
+                {}
+            ).addTo(map_cd8d18d517af009653b138b0a4307c78);
+        
+    
+            var icon_62153419c8cd20bcfd7e146b1f549d39 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "beige", "prefix": "glyphicon"}
+            );
+            marker_d5a8ead0604b25c2b06500ccbef9e02b.setIcon(icon_62153419c8cd20bcfd7e146b1f549d39);
+        
+    
+        var popup_b4a5103514e384ae16cef17c238ed51e = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a0bd0effd7f47c0cb3081e50f14af413 = $(`<div id="html_a0bd0effd7f47c0cb3081e50f14af413" style="width: 100.0%; height: 100.0%;">Muzhappilangad Beach: Low alert</div>`)[0];
+                popup_b4a5103514e384ae16cef17c238ed51e.setContent(html_a0bd0effd7f47c0cb3081e50f14af413);
+            
+        
+
+        marker_d5a8ead0604b25c2b06500ccbef9e02b.bindPopup(popup_b4a5103514e384ae16cef17c238ed51e)
+        ;
+
+        
+    
+    
+            var marker_e67b248d7d6a78ce2e7c68a8cd1380f9 = L.marker(
+                [17.7981, 83.3849],
+                {}
+            ).addTo(map_cd8d18d517af009653b138b0a4307c78);
+        
+    
+            var icon_d92b6335d8e94b72f43c28caa2130946 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_e67b248d7d6a78ce2e7c68a8cd1380f9.setIcon(icon_d92b6335d8e94b72f43c28caa2130946);
+        
+    
+        var popup_638df7f94929cdbb0d8fd1b1b6c8e887 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_881183c9509a9371869d9cbe13d099be = $(`<div id="html_881183c9509a9371869d9cbe13d099be" style="width: 100.0%; height: 100.0%;">Rushikonda Beach: The beach is safe</div>`)[0];
+                popup_638df7f94929cdbb0d8fd1b1b6c8e887.setContent(html_881183c9509a9371869d9cbe13d099be);
+            
+        
+
+        marker_e67b248d7d6a78ce2e7c68a8cd1380f9.bindPopup(popup_638df7f94929cdbb0d8fd1b1b6c8e887)
+        ;
+
+        
+    
+    
+            var marker_af0c0d4389202a664a55cb78b053df34 = L.marker(
+                [11.506, 92.997],
+                {}
+            ).addTo(map_cd8d18d517af009653b138b0a4307c78);
+        
+    
+            var icon_c9708ef78202ad2b10cc01e380593fa4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_af0c0d4389202a664a55cb78b053df34.setIcon(icon_c9708ef78202ad2b10cc01e380593fa4);
+        
+    
+        var popup_5dad411955b1d01249896305f8564d1b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bf212d7cd0969efcecf25cee555e5855 = $(`<div id="html_bf212d7cd0969efcecf25cee555e5855" style="width: 100.0%; height: 100.0%;">Radhanagar Beach: High alert</div>`)[0];
+                popup_5dad411955b1d01249896305f8564d1b.setContent(html_bf212d7cd0969efcecf25cee555e5855);
+            
+        
+
+        marker_af0c0d4389202a664a55cb78b053df34.bindPopup(popup_5dad411955b1d01249896305f8564d1b)
+        ;
+
+        
+    
+    
+            var marker_9334eca9ede04373eb5c995c184dc741 = L.marker(
+                [12.6269, 80.192],
+                {}
+            ).addTo(map_cd8d18d517af009653b138b0a4307c78);
+        
+    
+            var icon_21d4279c8a02e876ae60661177734e12 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "beige", "prefix": "glyphicon"}
+            );
+            marker_9334eca9ede04373eb5c995c184dc741.setIcon(icon_21d4279c8a02e876ae60661177734e12);
+        
+    
+        var popup_a864ebd9170b6758c02c640c4d6252e8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dd7dcb196f275f61f524100919ff1aba = $(`<div id="html_dd7dcb196f275f61f524100919ff1aba" style="width: 100.0%; height: 100.0%;">Mahabalipuram Beach: Low alert</div>`)[0];
+                popup_a864ebd9170b6758c02c640c4d6252e8.setContent(html_dd7dcb196f275f61f524100919ff1aba);
+            
+        
+
+        marker_9334eca9ede04373eb5c995c184dc741.bindPopup(popup_a864ebd9170b6758c02c640c4d6252e8)
+        ;
+
+        
+    
+    
+            var marker_f122713990b9ec2cf979ebf326e0ab48 = L.marker(
+                [20.2638, 86.6895],
+                {}
+            ).addTo(map_cd8d18d517af009653b138b0a4307c78);
+        
+    
+            var icon_27cb7d0ca06be049423674b4494c13e7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_f122713990b9ec2cf979ebf326e0ab48.setIcon(icon_27cb7d0ca06be049423674b4494c13e7);
+        
+    
+        var popup_3a51a001f2f0cc10bd152d147e534229 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e4f92bde47056f6940a2e3f5e881d7e2 = $(`<div id="html_e4f92bde47056f6940a2e3f5e881d7e2" style="width: 100.0%; height: 100.0%;">Paradip Beach: The beach is unsafe</div>`)[0];
+                popup_3a51a001f2f0cc10bd152d147e534229.setContent(html_e4f92bde47056f6940a2e3f5e881d7e2);
+            
+        
+
+        marker_f122713990b9ec2cf979ebf326e0ab48.bindPopup(popup_3a51a001f2f0cc10bd152d147e534229)
+        ;
+
+        
+    
+    
+            var marker_6d2d1fb81b3209632221cacefce55ba4 = L.marker(
+                [16.9494, 82.2381],
+                {}
+            ).addTo(map_cd8d18d517af009653b138b0a4307c78);
+        
+    
+            var icon_d68df9be5a0b6f68a16d8e3835c04dd7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_6d2d1fb81b3209632221cacefce55ba4.setIcon(icon_d68df9be5a0b6f68a16d8e3835c04dd7);
+        
+    
+        var popup_f2584515944a8f19f687dd7acd69239f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e686287f6fdcf847d0de97a57c3b8dc6 = $(`<div id="html_e686287f6fdcf847d0de97a57c3b8dc6" style="width: 100.0%; height: 100.0%;">Kakinada Beach: The beach is safe</div>`)[0];
+                popup_f2584515944a8f19f687dd7acd69239f.setContent(html_e686287f6fdcf847d0de97a57c3b8dc6);
+            
+        
+
+        marker_6d2d1fb81b3209632221cacefce55ba4.bindPopup(popup_f2584515944a8f19f687dd7acd69239f)
+        ;
+
+        
+    
+    
+            var marker_fd4411382e1820c9c4f6e25afc469da1 = L.marker(
+                [17.8902, 83.4476],
+                {}
+            ).addTo(map_cd8d18d517af009653b138b0a4307c78);
+        
+    
+            var icon_e8db9a1cf7dec285f7955ab992d15156 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "beige", "prefix": "glyphicon"}
+            );
+            marker_fd4411382e1820c9c4f6e25afc469da1.setIcon(icon_e8db9a1cf7dec285f7955ab992d15156);
+        
+    
+        var popup_cb4543fa56f27c7699475031aa536b33 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_17805d53d7f49a8406f9054e8b1073c0 = $(`<div id="html_17805d53d7f49a8406f9054e8b1073c0" style="width: 100.0%; height: 100.0%;">Bheemunipatnam Beach: Low alert</div>`)[0];
+                popup_cb4543fa56f27c7699475031aa536b33.setContent(html_17805d53d7f49a8406f9054e8b1073c0);
+            
+        
+
+        marker_fd4411382e1820c9c4f6e25afc469da1.bindPopup(popup_cb4543fa56f27c7699475031aa536b33)
+        ;
+
+        
+    
+    
+            var marker_84c7b569940137ae8f0b89528bb0901e = L.marker(
+                [15.9662, 80.5075],
+                {}
+            ).addTo(map_cd8d18d517af009653b138b0a4307c78);
+        
+    
+            var icon_dcc4471493ec7834f74925f01daec3f9 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "orange", "prefix": "glyphicon"}
+            );
+            marker_84c7b569940137ae8f0b89528bb0901e.setIcon(icon_dcc4471493ec7834f74925f01daec3f9);
+        
+    
+        var popup_d0de5dcf267ce5ed1024c993216d469b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_3216c97349cff1a90f9acbe8417a2f70 = $(`<div id="html_3216c97349cff1a90f9acbe8417a2f70" style="width: 100.0%; height: 100.0%;">Suryalanka Beach: High alert</div>`)[0];
+                popup_d0de5dcf267ce5ed1024c993216d469b.setContent(html_3216c97349cff1a90f9acbe8417a2f70);
+            
+        
+
+        marker_84c7b569940137ae8f0b89528bb0901e.bindPopup(popup_d0de5dcf267ce5ed1024c993216d469b)
+        ;
+
+        
+    
+    
+            var marker_ddf502fd1e6282a0272393ba7654f07d = L.marker(
+                [10.92, 79.8355],
+                {}
+            ).addTo(map_cd8d18d517af009653b138b0a4307c78);
+        
+    
+            var icon_bfdc0bfae0dce00a545996194f900722 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_ddf502fd1e6282a0272393ba7654f07d.setIcon(icon_bfdc0bfae0dce00a545996194f900722);
+        
+    
+        var popup_bd6dce22d00ab62bddcdc9caf5adce80 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5ef0cc5f6f6926fcaf151c65b274439d = $(`<div id="html_5ef0cc5f6f6926fcaf151c65b274439d" style="width: 100.0%; height: 100.0%;">Karaikal Beach: The beach is safe</div>`)[0];
+                popup_bd6dce22d00ab62bddcdc9caf5adce80.setContent(html_5ef0cc5f6f6926fcaf151c65b274439d);
+            
+        
+
+        marker_ddf502fd1e6282a0272393ba7654f07d.bindPopup(popup_bd6dce22d00ab62bddcdc9caf5adce80)
+        ;
+
+        
+    
+    
+            var marker_29d58e4a63f74df262b9c8c0cec018f3 = L.marker(
+                [11.9338, 79.8372],
+                {}
+            ).addTo(map_cd8d18d517af009653b138b0a4307c78);
+        
+    
+            var icon_2bc8b5acda4e46387d38ffde3ce74632 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "green", "prefix": "glyphicon"}
+            );
+            marker_29d58e4a63f74df262b9c8c0cec018f3.setIcon(icon_2bc8b5acda4e46387d38ffde3ce74632);
+        
+    
+        var popup_f733bc148ef325045218f0a93d7086a0 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_bc011c6f67672c137f415a5a60a6c12c = $(`<div id="html_bc011c6f67672c137f415a5a60a6c12c" style="width: 100.0%; height: 100.0%;">Pondicherry Beach: The beach is safe</div>`)[0];
+                popup_f733bc148ef325045218f0a93d7086a0.setContent(html_bc011c6f67672c137f415a5a60a6c12c);
+            
+        
+
+        marker_29d58e4a63f74df262b9c8c0cec018f3.bindPopup(popup_f733bc148ef325045218f0a93d7086a0)
+        ;
+
+        
+    
+    
+            var marker_c328e70a0dc11c334c8962e44388339e = L.marker(
+                [14.4446, 80.1064],
+                {}
+            ).addTo(map_cd8d18d517af009653b138b0a4307c78);
+        
+    
+            var icon_f9faa884a06d8be1be18369c4d969d5a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "cloud", "iconColor": "white", "markerColor": "beige", "prefix": "glyphicon"}
+            );
+            marker_c328e70a0dc11c334c8962e44388339e.setIcon(icon_f9faa884a06d8be1be18369c4d969d5a);
+        
+    
+        var popup_c2e2ddd21fe5b7fa922eeb7cff0109f4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8708d98f32abb3908e27d67c93559435 = $(`<div id="html_8708d98f32abb3908e27d67c93559435" style="width: 100.0%; height: 100.0%;">Mypadu Beach: Low alert</div>`)[0];
+                popup_c2e2ddd21fe5b7fa922eeb7cff0109f4.setContent(html_8708d98f32abb3908e27d67c93559435);
+            
+        
+
+        marker_c328e70a0dc11c334c8962e44388339e.bindPopup(popup_c2e2ddd21fe5b7fa922eeb7cff0109f4)
+        ;
+
+        
+    
+    
+            var marker_4b7d267e7ceab3909d6e6d8e25ef6c6c = L.marker(
+                [28.7041, 77.1025],
+                {}
+            ).addTo(map_cd8d18d517af009653b138b0a4307c78);
+        
+    
+            var icon_40cbfc94a05798a145290e3a1d0224da = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "home", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_4b7d267e7ceab3909d6e6d8e25ef6c6c.setIcon(icon_40cbfc94a05798a145290e3a1d0224da);
+        
+    
+        var popup_716542c9d5db81c4fb50cc11e4a02aa5 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b42534be891c02afdb4b006114b961f7 = $(`<div id="html_b42534be891c02afdb4b006114b961f7" style="width: 100.0%; height: 100.0%;">Current Location</div>`)[0];
+                popup_716542c9d5db81c4fb50cc11e4a02aa5.setContent(html_b42534be891c02afdb4b006114b961f7);
+            
+        
+
+        marker_4b7d267e7ceab3909d6e6d8e25ef6c6c.bindPopup(popup_716542c9d5db81c4fb50cc11e4a02aa5)
+        ;
+
+        
+    
+</script>
+</html>
