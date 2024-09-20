@@ -8,7 +8,9 @@ Coastal tourism often comes with safety risks such as dangerous tides, tsunami t
 
 ### 🚀 Solution
 
-By utilizing real-time **INCOIS API** data, Samudra Saarthi's **AI-powered ML model** evaluates beach safety and classifies it as **Safe**, **Cautionary**, or **Risky**. This allows users to see past data trends, check current recreational activities, and access a **geospatial safety map** for a comprehensive beach safety overview.
+*Samudra-Saarthi* is a comprehensive coastal tourism safety app designed to provide real-time, reliable information about beach conditions in India. With environmental factors like rising tides, coastal currents, and wave heights posing safety risks to tourists, it becomes crucial to have accurate data for decision-making. Samudra-Saarthi fetches real-time data from INCOIS APIs and uses a machine learning model to analyze risk parameters such as tsunami warnings, water quality, and weather hazards. Tourists can easily identify safe beaches through a color-coded safety index (Safe, Cautionary, Risky), ensuring informed and safe travel. The app also offers past data analysis, recreational activity suggestions, and an SOS feature for emergency situations.
+
+By providing a user-friendly interface and integrating advanced geospatial visualization, Samudra-Saarthi empowers tourists to make safe, well-informed decisions while enjoying the beauty of India’s coastal regions.
 
 ---
 
