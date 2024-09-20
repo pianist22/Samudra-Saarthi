@@ -20,13 +20,13 @@ We're leveraging a modern and powerful stack to ensure seamless performance and 
 |-----------------|------------------|----------|
 | **Flutter**     | Mobile App Frontend | ![Flutter](https://img.icons8.com/color/48/000000/flutter.png) |
 | **Node.js**     | Backend API Integration | ![Node.js](https://img.icons8.com/color/48/000000/nodejs.png) |
-| **Express.js**  | API Framework | ![Express](https://github.com/pianist22/Images/blob/main/express.js.png) |
+| **Express.js**  | API Framework | ![Express](https://github.com/pianist22/Images/blob/main/Express%2Cjs.png) |
 | **MongoDB**     | NoSQL Database | ![MongoDB](https://img.icons8.com/color/48/000000/mongodb.png) |
-| **Flask**       | Micro Web Framework | ![Flask](https://img.icons8.com/ios-filled/50/000000/flask.png) |
+| **Flask**       | Micro Web Framework | ![Flask](https://github.com/pianist22/Images/blob/main/Flask.png) |
 | **Python**      | AI/ML Development | ![Python](https://img.icons8.com/color/48/000000/python.png) |
-| **Scikit-Learn**| ML Model Building | ![Scikit Learn](https://img.icons8.com/color/48/000000/scikit-learn.png) |
-| **Meta LLAMA**  | AI Chatbot Integration | ![Meta LLAMA](https://img.icons8.com/doodle/48/000000/artificial-intelligence.png) |
-| **Riverpod**    | State Management | ![Riverpod](https://img.icons8.com/ios-filled/50/000000/lifecycle.png) |
+| **Scikit-Learn**| ML Model Building | ![Scikit Learn](https://github.com/pianist22/Images/blob/main/Scikit-learn.png) |
+| **Meta LLAMA**  | AI Chatbot Integration | ![Meta LLAMA](https://github.com/pianist22/Images/blob/main/Meta.png) |
+| **Riverpod**    | State Management | ![Riverpod](https://github.com/pianist22/Images/blob/main/riverpod.png) |
 
 ---
 
@@ -48,7 +48,7 @@ We're leveraging a modern and powerful stack to ensure seamless performance and 
 
 ---
 
-![App Preview](https://img.icons8.com/clouds/100/000000/app.png) 
+![App Preview](https://github.com/pianist22/Images/blob/main/AppPreview.jpeg) 
 
 *Providing peace of mind and enhanced travel experiences, one beach at a time!*
 
