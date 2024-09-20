@@ -43,13 +43,6 @@ We're leveraging a modern and powerful stack to ensure seamless performance and 
 - **Saarthi.AI Chatbot**: Get instant answers about beach safety and travel recommendations via our **LLAMA-powered AI chatbot**.
 - **SOS Emergency Feature**: Directly alerts local authorities in case of danger at the beach.
   
----
-
-## 🌐 Connect with Us
-
-- **LinkedIn**: [Connect Here](https://www.linkedin.com)
-- **GitHub**: [GitHub Repo](https://www.github.com)
-- **Twitter**: [Follow us on Twitter](https://www.twitter.com)
 
 ---
 
