@@ -1,5 +1,5 @@
 # 🌊 Samudra Saarthi - Coastal Tourism Safety App (SIH Problem Statement- 1656)
-### Team-> Paranoid Coderz
+### Team-> Paranoid Coderz(Team Id:6830)
 
 Welcome to **Samudra Saarthi**, a mobile application aimed at ensuring a safe and enjoyable coastal tourism experience for everyone! 🏖️
 
@@ -23,12 +23,12 @@ We're leveraging a modern and powerful stack to ensure seamless performance and 
 
 | **Technology**  | **Description**  | **Icon** |
 |-----------------|------------------|----------|
-| **Flutter**     | Mobile App Frontend | ![Flutter](https://img.icons8.com/color/48/000000/flutter.png) |
-| **Node.js**     | Backend API Integration | ![Node.js](https://img.icons8.com/color/48/000000/nodejs.png) |
+| **Flutter**     | Mobile App Frontend | <img src="https://github.com/pianist22/Images/blob/main/Flutter.png" alt="Flutter" width="180" height='90'> |
+| **Node.js**     | Backend API Integration | <img src="https://github.com/pianist22/Images/blob/main/Nodejs.png" alt="Flutter" width="180" height='90'> |
 | **Express.js**  | API Framework | <img src="https://github.com/pianist22/Images/blob/main/Express%2Cjs.png" alt="Flutter" width="180" height='90'> |
-| **MongoDB**     | NoSQL Database | ![MongoDB](https://img.icons8.com/color/48/000000/mongodb.png) |
+| **MongoDB**     | NoSQL Database |<img src="https://github.com/pianist22/Images/blob/main/Mongodb.png" alt="Flutter" width="180" height='90'>  |
 | **Flask**       | Micro Web Framework | <img src="https://github.com/pianist22/Images/blob/main/Flask.png" alt="Flutter" width="180" height='90'> |
-| **Python**      | AI/ML Development | ![Python](https://img.icons8.com/color/48/000000/python.png) |
+| **Python**      | AI/ML Development |<img src="https://github.com/pianist22/Images/blob/main/Python-2.png" alt="Flutter" width="180" height='90'>  |
 | **Scikit-Learn**| ML Model Building | <img src="https://github.com/pianist22/Images/blob/main/Scikit-learn.png" alt="Flutter" width="180" height='90'>|
 | **Meta LLAMA**  | AI Chatbot Integration | <img src="https://github.com/pianist22/Images/blob/main/Meta.png" alt="Flutter" width="180" height='90'> |
 | **Riverpod**    | State Management | <img src="https://github.com/pianist22/Images/blob/main/riverpod.png" alt="Flutter" width="180" height='90'> |
@@ -58,4 +58,3 @@ We're leveraging a modern and powerful stack to ensure seamless performance and 
 *Providing peace of mind and enhanced travel experiences, one beach at a time!*
 
 ---
-
