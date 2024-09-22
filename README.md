@@ -47,7 +47,11 @@ We're leveraging a modern and powerful stack to ensure seamless performance and 
 ---
 
 ### App-Preview
+<p>
 <img src="https://github.com/pianist22/Images/blob/main/AppPreview.jpeg" alt="Flutter" width="250" height='500'>
+<img src="https://github.com/pianist22/Images/blob/main/App_dashboard.png" alt="Flutter" width="250" height='500'>
+<img src="https://github.com/pianist22/Images/blob/main/GeospatialMapping.png" alt="Flutter" width="250" height='500'>
+</p>
 
 *Providing peace of mind and enhanced travel experiences, one beach at a time!*
 
